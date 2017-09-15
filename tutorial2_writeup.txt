@@ -1,0 +1,20 @@
+Latihan project hello world
+1. Tidak. Jika Spring boot distop lalu dirun kembali dan membuka localhost:8080/hello maka akan terjadi Whitelabel Error Page karena pada controller tidak didefinisikan requestmapping dengan kondisi /hello(karena sudah diganti /hello123).
+2. Tidak. Jika Spring boot distop lalu dirun kembali dan membuka localhost:8080/hello maka page yang sebelumnya akan muncul kembali(tidak berubah).
+3. Tidak. Jika Spring boot distop lalu dirun kembali dan membuka localhost:8080/hello maka page sebelumnya tidak muncul karena page sebelumnya muncul karena return hello ada. Sedangkan hello123 tidak ada.
+
+String return menandakan html mana yang akan dibaca oleh program. Di kasus ini file hello.html yang dipanggil. 
+
+========================================================================================
+Latihan request parameter
+1. akan memunculkan page greeting.html 
+2. terjadi error karena pada method greeting meminta parameter(requestparam) namun pada page tidak dimasukkan parameter
+
+memunculkan page greeting.html dengan nama null. hal ini terjadi karena dinyatakan bahwa greeting tidak harus meminta parameter(required = false) sehingga tidak terjadi error
+3. memunculkan page greeting.html dengan nama dunia karena dinyatakan nilai defaultnya = dunia (jika kondisi tidak dinyatakan parameter namanya)
+4. karena text pada th:text menutupi isi yang ada di dalam tag pada thymeleaf
+
+========================================================================================
+Latihan Path Variable
+1. hasilnya error karena bertabrakan dengan method greeting yang mana requestmappingnya sama(sama-sama /greeting). namun jika method greeting dihilangkan akan menghasilkan page greeting dengan nama dengklek
+2. akan menghasilkan page greeting.html dengan nama channek 
